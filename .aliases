@@ -1,0 +1,12 @@
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+alias grep='grep --color=auto'
+alias ls='ls -Ahl --color=auto'
+alias vim='nvim'
+alias vdiff='nvim -d'
+
+# Docker and  k8s stuff
+alias k='kubectl'
+alias d='docker'
+alias kr='kubectl rabbitmq'
+alias m='minikube'
