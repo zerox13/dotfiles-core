@@ -10,3 +10,4 @@ fi
 if [ -f ~/.aliases ]; then
 . ~/.aliases
 fi
+source /usr/local/opt/spaceship/spaceship.zsh
