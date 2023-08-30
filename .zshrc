@@ -7,7 +7,13 @@ if [ -f ~/.functions ]; then
 . ~/.functions
 fi
 
+if [ -f ~/.profile ]; then
+. ~/.profile
+fi
+
+
+
 if [ -f ~/.aliases ]; then
 . ~/.aliases
 fi
-source /usr/local/opt/spaceship/spaceship.zsh
+eval "$(starship init zsh)"
