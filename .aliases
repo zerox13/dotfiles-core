@@ -1,3 +1,5 @@
+#!/bin/sh
+
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 alias grep='grep --color=auto'
@@ -10,3 +12,9 @@ alias k='kubectl'
 alias d='docker'
 alias kr='kubectl rabbitmq'
 alias m='minikube'
+
+
+# THNX ExMeBus project
+alias gidf='. $HOME/esp/esp-idf/export.sh'
+
+
