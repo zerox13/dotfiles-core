@@ -12,6 +12,7 @@ alias k='kubectl'
 alias d='docker'
 alias kr='kubectl rabbitmq'
 alias m='minikube'
+alias lg='lazygit'
 
 
 # THNX ExMeBus project

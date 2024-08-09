@@ -24,3 +24,44 @@ function wea(){
 function mvnB(){
 	mvn archetype:generate -DgroupId=com.dv18aar -DartifactId=$1 -DarchetypeArtifactId=maven-archetype-quickstart 		-DinteractiveMode=false
 }
+
+function adb() {
+    # Execute the actual command
+    local totalLines=$(command adb devices | wc -l | xargs)
+    local totalDeviceConnected=$(expr $totalLines - 2)
+
+    if [[ "$@" != *"-s "* && $totalDeviceConnected -gt 1 ]]; then
+        # Get the list of connected devices
+        devices=(`command adb devices | awk '$2 == "device" {print $1}'`)
+        devicesText=""
+
+        # Loop through each device
+        for device in $devices; do
+            # Get the market name property
+            market_name=$(adb -s "$device" shell getprop ro.product.vendor.marketname)
+
+            # Check if market name is empty
+            if [ -z "$market_name" ]; then
+                # Get the model property if market name is empty
+                market_name=$(adb -s "$device" shell getprop ro.product.model)
+            fi
+
+            devicesText+="$device - $market_name\n"
+        done
+
+        # Prompt user to select a device
+        local selection=$(echo -e $devicesText | fzf)
+        local deviceId=$(echo $selection | awk '{print $1}')
+        GREEN='\033[0;32m'
+        NC='\033[0m' # No Color
+        echo -e "📱 Device Selected: ${GREEN}$selection${NC}"
+
+        # Execute adb command on the selected device
+        command adb -s $deviceId "$@"
+    else
+        # Execute the command without device selection
+        command adb "$@"
+    fi
+
+    return
+}
