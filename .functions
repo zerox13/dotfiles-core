@@ -65,3 +65,7 @@ function adb() {
 
     return
 }
+
+function adblog(){
+    adb logcat -v color | grep `adb shell ps | grep $1 | awk '{print $2}'` 
+}

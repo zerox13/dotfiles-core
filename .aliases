@@ -18,4 +18,4 @@ alias lg='lazygit'
 # THNX ExMeBus project
 alias gidf='. $HOME/esp/esp-idf/export.sh'
 
-
+alias adbweb="adb shell am start -a android.intent.action.VIEW -d"
