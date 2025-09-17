@@ -3,9 +3,15 @@
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 alias grep='grep --color=auto'
-alias ls='ls -Ahl --color=auto'
 alias vim='nvim'
 alias vdiff='nvim -d'
+
+# Set-up icons for files/directories in terminal using lsd
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 
 # Docker and  k8s stuff
 alias k='kubectl'
