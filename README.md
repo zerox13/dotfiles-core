@@ -1,16 +1,17 @@
-# dotfiles_light
-A minimal version of my dotfiles
-
-# install
-* clone the repo
-* install tmux tpm
-* install the FiraCode nerdFont
-
-
 
 # dotfiles-core
+
+
+
+░ ▒█▀▀▄ ▒█▀▀▀█ ▀▀█▀▀ ▒█▀▀▀ ▀█▀ ▒█░░░ ▒█▀▀▀ ▒█▀▀▀█    
+▄ ▒█░▒█ ▒█░░▒█ ░▒█░░ ▒█▀▀▀ ▒█░ ▒█░░░ ▒█▀▀▀ ░▀▀▀▄▄    
+█ ▒█▄▄▀ ▒█▄▄▄█ ░▒█░░ ▒█░░░ ▄█▄ ▒█▄▄█ ▒█▄▄▄ ▒█▄▄▄█    
+
+
+
+
+   
 Provides the core dotfiles that are crossplatform for my workflow
-![](https://i.imgur.com/AKIRizD.png)
 
 ### Config list
 This repo contains config files for the following:
@@ -19,6 +20,16 @@ This repo contains config files for the following:
 - Alacrity
 - shell functions
 - Aliases
+
+
+### install
+* clone the repo
+* install tmux tpm
+* install the FiraCode nerdFont
+
+
+
+
 
 ## Use as a bare clone
 
