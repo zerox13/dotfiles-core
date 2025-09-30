@@ -33,11 +33,6 @@ This repo contains config files for the following:
 
 ## Use as a bare clone
 
-Use this alias for now,
-```zsh
-alias coreConf='/usr/bin/git --git-dir=$HOME/.dotfiles-core/ --work-tree=$HOME'
-```
-
 Run this snippet to do the job.
 ```
 git clone --bare git@github.com:zerox13/dotfiles-core.git $HOME/.dotfiles-core

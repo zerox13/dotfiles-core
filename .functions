@@ -1,5 +1,8 @@
 #! /usr/bin/zsh
 #-------> My Function <----------
+function coreConfig {
+   /usr/bin/git --git-dir=$HOME/.dotfiles-core/ --work-tree=$HOME $@
+}
 
 function goto(){
 	ssh -t dv18aar@$1.cs.umu.se "/usr/bin/zsh"

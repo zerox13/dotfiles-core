@@ -1,7 +1,5 @@
 #!/bin/sh
 
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
 alias grep='grep --color=auto'
 alias ls='ls -Ahl --color=auto'
 alias vim='nvim'
