@@ -15,6 +15,12 @@ alias m='minikube'
 alias lg='lazygit'
 
 
+# Flutter 
+alias f='flutter'
+
+# Cursor 
+alias ca='cursor-agent'
+
 # THNX ExMeBus project
 alias gidf='. $HOME/esp/esp-idf/export.sh'
 
