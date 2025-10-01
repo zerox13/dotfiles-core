@@ -11,7 +11,7 @@
 
 
    
-Provides the core dotfiles that are crossplatform for my workflow
+Manages my core dotfiles that are not specific for an OS. The rest will be eaither in a new repo or in a sepreate branch.
 
 ### Config list
 This repo contains config files for the following:
@@ -20,18 +20,38 @@ This repo contains config files for the following:
 - Alacrity
 - shell functions
 - Aliases
+- Starship
 
+## Setup
 
-### install
-* clone the repo
+#### Prerequisites
+* Install GNU stow
 * install tmux tpm
-* install the FiraCode nerdFont
+* install nvim
+* install a NerdFont, like FiraCode
+
+
+### Manage files using GNU Stow
+GNU Stow is a symlink farm manager. Can be used in this case to create symlinks to all dotfiles in a simple way.  
+
+```[!NOTE]
+Important: because Stow places the symlinks in parent dir, repo should be cloned in $HOME
+
+Also, The file structure should be the same structure as it should be in $HOME
+```
+
+* clone the repo in $HOME 
+
+### Create Symlinks 
+
+```
+cd dotfiles-core
+stow .
+```
 
 
 
-
-
-## Use as a bare clone
+### Use as a bare clone
 
 Run this snippet to do the job.
 ```
