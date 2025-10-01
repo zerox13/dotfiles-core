@@ -34,11 +34,11 @@ This repo contains config files for the following:
 ### Manage files using GNU Stow
 GNU Stow is a symlink farm manager. Can be used in this case to create symlinks to all dotfiles in a simple way.  
 
-```[!NOTE]
-Important: because Stow places the symlinks in parent dir, repo should be cloned in $HOME
+>[!NOTE]
+>Important: because Stow places the symlinks in parent dir, repo should be cloned in $HOME
+>
+>Also, The file structure should be the same structure as it should be in $HOME
 
-Also, The file structure should be the same structure as it should be in $HOME
-```
 
 * clone the repo in $HOME 
 
