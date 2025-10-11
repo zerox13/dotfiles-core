@@ -1,7 +1,8 @@
 #!/bin/sh
 
 alias grep='grep --color=auto'
-alias ls='ls -Ahl --color=auto'
+alias ls='colorls -AC'
+alias lls="ls -og --time-style='+%b-%d %H:%M'"
 alias vim='nvim'
 alias vdiff='nvim -d'
 

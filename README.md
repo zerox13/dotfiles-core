@@ -28,6 +28,8 @@ This repo contains config files for the following:
 * Install GNU stow
 * install tmux tpm
 * install nvim
+* install colorls
+    * Run: ```gem install colorls```
 * install a NerdFont, like FiraCode
     * Download [FiraCode](https://www.nerdfonts.com/font-downloads)
     * Unzip and move to: ```~/.local/share/font```

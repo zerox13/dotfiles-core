@@ -28,10 +28,13 @@ right_format = "$status"
 # Disable the blank line at the start of the prompt
 # add_newline = false
 
+
 # The status code 
 [status]
 disabled = false
 format = '[$symbol $status]($style) '
+
+
 
 # You can also replace your username with a neat symbol like   or disable this
 # and use the os module below
