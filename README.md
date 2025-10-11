@@ -29,6 +29,12 @@ This repo contains config files for the following:
 * install tmux tpm
 * install nvim
 * install a NerdFont, like FiraCode
+    * Download FiraCode (https://www.nerdfonts.com/font-downloads)[Download]
+    * Unzip and move to ``` ~/.local/share/font
+    * Run:
+    ```
+    fc-cache -fv
+    ```
 
 
 ### Manage files using GNU Stow
