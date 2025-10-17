@@ -33,7 +33,7 @@ vim.keymap.set("n", "<leader>j", "<cmd>cnext<CR>")
 vim.keymap.set("n", "<leader>k", "<cmd>cprev<CR>")
 
 -- LaTeX maps 
-vim.keymap.set("n", "<leader>lc", ":! pdflatex main.tex <CR><CR>")
-vim.keymap.set("n", "<leader>lv", ":! open main.pdf & disown <CR><CR>")
+--vim.keymap.set("n", "<leader>lc", ":! pdflatex main.tex <CR><CR>")
+--vim.keymap.set("n", "<leader>lv", ":! open main.pdf & disown <CR><CR>")
 
 
