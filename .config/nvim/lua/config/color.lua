@@ -3,8 +3,8 @@
 
 function ColorMyPencils(color) 
     vim.o.background = "dark" -- or "light" for light mode
-	-- color = color or "gruvbox"
-	color = color or "dracula"
+	color = color or "gruvbox"
+	--color = color or "dracula"
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(1, "Normal", { bg = "none" })
