@@ -6,6 +6,8 @@ alias ll="ls -og --gs --time-style='+%b-%d %H:%M'"
 alias vim='nvim'
 alias vdiff='nvim -d'
 
+alias top='bpytop'
+
 # Docker and  k8s stuff
 alias k='kubectl'
 alias d='docker'
