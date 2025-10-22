@@ -1,7 +1,11 @@
 return {
     "folke/snacks.nvim",
-    ---@type snacks.Config
+    priority = 1000,
+    lazy = false,
     opts = {
+        lazygit = {
+            enabled = true
+        },
         indent = {
             priority = 1,
             enabled = true, -- enable indent guides
@@ -13,5 +17,8 @@ return {
     },
     keys = {
         { "<leader>lg", function() Snacks.lazygit() end, desc = "Lazygit" },
+
     }
+
+
 }
