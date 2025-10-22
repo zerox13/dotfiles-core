@@ -16,6 +16,14 @@ vim.opt.cursorline = true
 vim.opt.encoding= "utf-8"
 vim.opt.cmdheight = 1
 
+-- folding
+vim.opt.foldmethod="expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevel = 20
+vim.opt.foldcolumn = "1"
+
+
+
 
 -- new stuff to try
 vim.opt.wrap = false

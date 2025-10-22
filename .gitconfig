@@ -1,0 +1,37 @@
+; [core]
+;     pager = delta
+;
+; [interactive]
+;     diffFilter = delta --color-only
+;
+; [delta]
+;     navigate = true  # use n and N to move between diff sections
+;     dark = true      # or light = true, or omit for auto-detection
+;
+; [merge]
+;     conflictStyle = zdiff3
+
+[core]
+	pager = delta
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+[delta]
+    navigate = true    
+    light = false      
+    side-by-side = false  
+    line-numbers = true   
+    features = decorations	 
+[delta "interactive"]
+    keep-plus-minus-markers = true
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
