@@ -14,4 +14,5 @@ fi
 if [ -f ~/.aliases ]; then
 . ~/.aliases
 fi
+eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
