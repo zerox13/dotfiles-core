@@ -1,7 +1,7 @@
 -- Auther: Abdulsalam Aldahir 
 -- GitHub: Zerox13
 
-function ColorMyPencils(color) 
+function ColorMyPencils(color)
     vim.o.background = "dark" -- or "light" for light mode
 	-- color = color or "gruvbox"
 	color = color or "dracula"
