@@ -21,6 +21,7 @@ $scala\
 [ ](fg:#86BBD8 bg:#06969A)\
 $docker_context\
 [ ](fg:#06969A)\
+$python\
 """
 
 right_format = "$status"
