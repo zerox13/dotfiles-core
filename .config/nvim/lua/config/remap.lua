@@ -6,6 +6,8 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<TAB>", vim.cmd.bnext)
 vim.keymap.set("n", "<S-TAB>", vim.cmd.bprevious)
 
+vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
+vim.keymap.set({"n", "v"}, "<space>x", ":.lua<CR>")
 
 -- kill the buffer
 vim.keymap.set("n", "<leader>d", vim.cmd.bd)
