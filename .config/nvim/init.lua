@@ -1,5 +1,6 @@
 require("core.lazy")
 require("core.lsp")
+require("core.floaterminal")
 
 
 require("config.remap")
