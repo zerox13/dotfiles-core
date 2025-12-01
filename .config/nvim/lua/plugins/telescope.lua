@@ -62,6 +62,8 @@ return {
                     cwd = "$HOME/dotfiles-core/"
                 }
             end)
+
+            require "config.telescope.multigrep".setup()
         end
     }
 }

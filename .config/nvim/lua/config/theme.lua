@@ -1,7 +1,7 @@
 -- Auther: Abdulsalam Aldahir
 -- GitHub: Zerox13
 
-function ColorMyPencils(color)
+local function themeSetup(color)
     vim.o.background = "dark" -- or "light" for light mode
     color = color or "gruvbox"
     -- color = color or "dracula"
@@ -16,4 +16,4 @@ function ColorMyPencils(color)
     vim.api.nvim_set_hl(0, 'TelescopePreviewBorder', { fg = '#fabd2f' }) -- Yellow
 end
 
-ColorMyPencils()
+themeSetup()

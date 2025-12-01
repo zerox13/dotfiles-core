@@ -1,12 +1,12 @@
 require("core.lazy")
 require("core.lsp")
-require("core.floaterminal")
 
 
 require("config.remap")
 require("config.options")
-require("config.color")
+require("config.theme")
 require("config.settings_functions")
+require("config.floaterminal")
 
 Disable_arrow_keys()
 
