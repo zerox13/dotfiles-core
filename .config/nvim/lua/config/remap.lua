@@ -2,7 +2,6 @@ vim.g.mapleader = " "
 
 vim.keymap.set("i", "jk", "<esc>", {noremap=true})
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<TAB>", vim.cmd.bnext)
 vim.keymap.set("n", "<S-TAB>", vim.cmd.bprevious)
 
@@ -13,10 +12,10 @@ vim.keymap.set({"n", "v"}, "<space>x", ":.lua<CR>")
 vim.keymap.set("n", "<leader>d", vim.cmd.bd)
 
 -- The copy and paste shit 
-vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
+-- Internal spell check
 vim.keymap.set("n", "<leader>S", ":set spell! spelllang=en_us<CR>")
 
 
@@ -31,15 +30,15 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 -- Quickfix things
-vim.keymap.set("n", "<leader>j", "<cmd>cnext<CR>")
-vim.keymap.set("n", "<leader>k", "<cmd>cprev<CR>")
+vim.keymap.set("n", "<leader>n", "<cmd>cnext<CR>")
+vim.keymap.set("n", "<leader>p", "<cmd>cprev<CR>")
 
 -- folding
 vim.keymap.set("n", "-", "<cmd>foldclose<CR>")
 vim.keymap.set("n", "+", "<cmd>foldopen<CR>")
 
 
--- Open floating terminal
+-- Toggle floating terminal
 vim.keymap.set("n", "<leader>j", function()
     vim.cmd.Floaterminal()
 end)

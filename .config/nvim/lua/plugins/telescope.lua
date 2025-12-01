@@ -40,6 +40,9 @@ return {
             vim.keymap.set('n', '<leader>gt', builtin.git_stash, {})
 
             -- LSP Pickers
+            vim.keymap.set('n', '<leader>rr', builtin.lsp_references, {})
+            vim.keymap.set('n', '<leader>rd', builtin.lsp_definitions, {})
+
 
             -- Telescope general
             vim.keymap.set('n', '<leader>cs', builtin.colorscheme, {})
