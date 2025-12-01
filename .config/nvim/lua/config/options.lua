@@ -11,7 +11,7 @@ vim.opt.smartindent = true
 
 vim.opt.colorcolumn = "80"
 
-vim.opt.bg = dark
+vim.opt.bg = "dark"
 vim.opt.cursorline = true
 vim.opt.encoding= "utf-8"
 vim.opt.cmdheight = 1

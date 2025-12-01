@@ -11,12 +11,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
         local client = vim.lsp.get_client_by_id(ev.data.client_id)
         if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_completion) then
             vim.opt.completeopt = { 'menu', 'menuone', 'noinsert', 'fuzzy', 'popup' }
-            vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = false })
 
-            -- Keymaps
-            vim.keymap.set('i', '<C-n>', function()
-                vim.lsp.completion.get()
-            end)
+            -- Lsp native completion. Commented now since we are trying blink
+            -- vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = false })
+            --
+            -- -- Keymaps
+            -- vim.keymap.set('i', '<C-n>', function()
+            --     vim.lsp.completion.get()
+            -- end)
 
             local opts = {buffer = ev.buf, remap = false}
             vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
