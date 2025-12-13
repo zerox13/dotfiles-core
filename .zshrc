@@ -14,5 +14,10 @@ fi
 if [ -f ~/.aliases ]; then
 . ~/.aliases
 fi
+
+# Initialize completion system
+autoload -Uz compinit && compinit
+
 eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
+eval "$(uv generate-shell-completion zsh)"

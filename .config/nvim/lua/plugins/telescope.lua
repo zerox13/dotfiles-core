@@ -42,6 +42,9 @@ return {
             -- LSP Pickers
             vim.keymap.set('n', '<leader>rr', builtin.lsp_references, {})
             vim.keymap.set('n', '<leader>rd', builtin.lsp_definitions, {})
+            vim.keymap.set('n', '<leader>ric', builtin.lsp_incoming_calls, {})
+
+
 
 
             -- Telescope general

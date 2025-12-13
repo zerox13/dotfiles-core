@@ -22,7 +22,7 @@ return {
         keymap = {
             preset = 'default',
 
-            ['<C-n>'] = { 'show', 'fallback' },
+            -- ['<C-n>'] = { 'show', 'fallback' },
         },
 
         appearance = {
