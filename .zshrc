@@ -18,6 +18,16 @@ fi
 # Initialize completion system
 autoload -Uz compinit && compinit
 
+## History things
+HISTFILE=~/.histfile
+# Maximum lines kept in memory
+export HISTSIZE=100000
+# Maximum lines saved to $HISTFILE
+export SAVEHIST=100000
+setopt appendhistory
+
+
+# Eval things
 eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
 eval "$(uv generate-shell-completion zsh)"
