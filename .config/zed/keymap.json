@@ -23,5 +23,11 @@
     "bindings": {
       "ctrl-j": "terminal_panel::Toggle"
     }
+  },
+  {
+    "context": "(Editor && edit_prediction)",
+    "bindings": {
+      "tab": null
+    }
   }
 ]

@@ -7,17 +7,31 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "default_profile": "ask",
+    "always_allow_tool_actions": true,
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
+    },
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "relative_line_numbers": "wrapped",
+  "terminal": {
+    "font_family": "FiraCode Nerd Font Mono"
+  },
   "session": {
     "trust_all_worktrees": true,
   },
   "vim_mode": true,
   "base_keymap": "JetBrains",
-  "icon_theme": "Zed (Default)",
+  "icon_theme": "Catppuccin Latte",
   "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "buffer_font_size": 13.0,
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "Gruvbox Dark",
+    "dark": "Catppuccin Frappé",
   },
 }

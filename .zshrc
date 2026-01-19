@@ -31,3 +31,6 @@ setopt appendhistory
 eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
 eval "$(uv generate-shell-completion zsh)"
+eval "$(zoxide init zsh)"
+
+. "$HOME/.local/bin/env"
