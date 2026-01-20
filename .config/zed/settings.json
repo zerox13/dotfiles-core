@@ -12,14 +12,14 @@
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+      "model": "claude-sonnet-4",
     },
     "favorite_models": [],
-    "model_parameters": []
+    "model_parameters": [],
   },
   "relative_line_numbers": "wrapped",
   "terminal": {
-    "font_family": "FiraCode Nerd Font Mono"
+    "font_family": "FiraCode Nerd Font Mono",
   },
   "session": {
     "trust_all_worktrees": true,
@@ -34,4 +34,19 @@
     "light": "One Light",
     "dark": "Catppuccin Frappé",
   },
+  "file_scan_exclusions": [
+    "**/.ruff_cache",
+    "**/__pycache__",
+    "**/.pytest_cache",
+    "**/.venv",
+    // default values below
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+  ],
 }
