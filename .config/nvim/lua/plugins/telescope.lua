@@ -28,16 +28,15 @@ return {
 
         local builtin = require('telescope.builtin')
 
-        vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = "Find Files" })
-        vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = "Grep live" })
-        vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = "Find Buffers" })
-        vim.keymap.set('n', '<leader>fh', builtin.help_tags, {  desc = "Help Tags" })
+        vim.keymap.set('n', '<leader>ff', builtin.find_files,        { desc = "Find Files" })
+        vim.keymap.set('n', '<leader>fb', builtin.buffers,           { desc = "Find Buffers" })
+        vim.keymap.set('n', '<leader>fh', builtin.help_tags,         { desc = "Help Tags" })
 
         -- Git Pickers
-        vim.keymap.set('n', '<leader>gc', builtin.git_commits, {desc = "Git Commits" })
-        vim.keymap.set('n', '<leader>gs', builtin.git_status, { desc = "Git Status" })
-        vim.keymap.set('n', '<leader>gf', builtin.git_files, { desc = "Git Files" })
-        vim.keymap.set('n', '<leader>gt', builtin.git_stash, { desc = "Git Stash" })
+        vim.keymap.set('n', '<leader>gc', builtin.git_commits,       { desc = "Git Commits" })
+        vim.keymap.set('n', '<leader>gs', builtin.git_status,        { desc = "Git Status" })
+        vim.keymap.set('n', '<leader>gf', builtin.git_files,         { desc = "Git Files" })
+        vim.keymap.set('n', '<leader>gt', builtin.git_stash,         { desc = "Git Stash" })
 
         -- LSP Pickers
         vim.keymap.set('n', '<leader>rr', builtin.lsp_references, { desc = "LSP References" })
