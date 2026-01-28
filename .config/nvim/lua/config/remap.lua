@@ -1,4 +1,4 @@
-vim.keymap.set("i", "jk", "<esc>", {noremap=true})
+-- vim.keymap.set("i", "jk", "<esc>", {noremap=true})
 
 vim.keymap.set("n", "<TAB>", vim.cmd.bnext)
 vim.keymap.set("n", "<S-TAB>", vim.cmd.bprevious)
