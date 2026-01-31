@@ -3,3 +3,4 @@ git:
     colorArg: never
     pager: delta --dark --paging=never 
     useConfig: false
+  autoFetch: false

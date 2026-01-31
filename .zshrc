@@ -15,6 +15,10 @@ if [ -f ~/.aliases ]; then
 . ~/.aliases
 fi
 
+# Load RF functions, This file exists only on my RF machine
+if [ -f ~/.RF_functions ]; then
+. ~/.RF_functions
+fi
 # Initialize completion system
 autoload -Uz compinit && compinit
 

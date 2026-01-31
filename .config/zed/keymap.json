@@ -21,13 +21,30 @@
   {
     "context": "(Workspace || Editor)",
     "bindings": {
-      "ctrl-j": "terminal_panel::Toggle"
-    }
+      "ctrl-j": "terminal_panel::Toggle",
+    },
   },
   {
     "context": "(Editor && edit_prediction)",
     "bindings": {
-      "tab": null
+      "tab": null,
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift shift": "file_finder::Toggle",
+    },
+  },
+  {
+    "bindings": {
+      "cmd-shift-c": null
+    }
+  },
+  {
+    "context": "KeymapEditor",
+    "bindings": {
+      "cmd-shift-c": null
     }
   }
 ]
