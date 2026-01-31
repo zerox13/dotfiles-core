@@ -54,6 +54,37 @@ local toggle_terminal = function()
   end
 end
 
+local send_to_floaterm = function(text)
+  local term_buf = state.floating.buf
+  if not term_buf or not vim.api.nvim_buf_is_valid(term_buf) then
+    return
+  end
+
+  local job_id = vim.b[term_buf].terminal_job_id
+  if not job_id then
+    return
+  end
+
+  vim.api.nvim_chan_send(job_id, text .. "\n")
+end
+
+local send_visual_to_floaterm = function()
+  local _, ls, cs = unpack(vim.fn.getpos("'<"))
+  local _, le, ce = unpack(vim.fn.getpos("'>"))
+  local lines = vim.api.nvim_buf_get_lines(0, ls - 1, le, false)
+  if #lines == 0 then
+    return
+  end
+  lines[#lines] = lines[#lines]:sub(1, ce)
+  lines[1] = lines[1]:sub(cs)
+  send_to_floaterm(table.concat(lines, "\n"))
+end
+
 -- Example usage:
 -- Create a floating window with default dimensions
 vim.api.nvim_create_user_command("Floaterminal", toggle_terminal, {})
+
+vim.keymap.set("v", "<leader>ts", send_visual_to_floaterm, { desc = "Send selection to floaterm" })
+vim.keymap.set("n", "<leader>tl", function()
+  send_to_floaterm(vim.api.nvim_get_current_line())
+end, { desc = "Send line to floaterm" })
