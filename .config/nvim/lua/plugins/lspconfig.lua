@@ -1,10 +1,28 @@
 return {
     "neovim/nvim-lspconfig",
     config = function()
+        -- Luaaa
+        vim.lsp.enable('lua_ls')
+        -- PYTHON
         vim.lsp.enable('basedpyright')
         vim.lsp.enable('ruff')
-        vim.lsp.enable('lua_ls')
+        -- WEB DEV
         vim.lsp.enable('html')
+        vim.lsp.enable('cssls')
+        vim.lsp.enable('eslint')
+        vim.lsp.enable('phpactor')
+        -- DevOps
+        vim.lsp.enable('yamlls')
+        vim.lsp.enable('tofu_ls')
+        -- GENERAL
+        vim.lsp.enable('jsonls')
+        vim.lsp.enable('bashls')
+        vim.lsp.enable('marksman')
+
+
+
+
+
         vim.lsp.config['basedpyright'] = {
             root_markers = {
                 'pyproject.toml',
