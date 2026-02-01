@@ -7,6 +7,7 @@ alias llt="ll -og --gs --tree"
 alias cd="z"
 
 
+alias v='nvim'
 alias vim='nvim'
 alias vdiff='nvim -d'
 

@@ -1,4 +1,4 @@
-#! /usr/bin/zsh
+#! /usr/bin/sh
 #-------> My Function <----------
 function coreConfig {
    /usr/bin/git --git-dir=$HOME/.dotfiles-core/ --work-tree=$HOME $@
