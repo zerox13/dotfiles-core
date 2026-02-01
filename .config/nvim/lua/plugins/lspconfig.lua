@@ -1,20 +1,5 @@
 return {
     "neovim/nvim-lspconfig",
-    opts = {
-        servers = {
-            ["*"] = {
-                -- stylua: ignore
-                keys = {
-                    { "gd", function() require("telescope.builtin").lsp_definitions({ reuse_win = true }) end,      desc = "Goto Definition",       has = "definition" },
-                    { "gr", "<cmd>Telescope lsp_references<cr>",                                                    desc = "References",            nowait = true },
-                    { "gI", function() require("telescope.builtin").lsp_implementations({ reuse_win = true }) end,  desc = "Goto Implementation" },
-                    { "gy", function() require("telescope.builtin").lsp_type_definitions({ reuse_win = true }) end, desc = "Goto T[y]pe Definition" },
-                },
-            },
-        },
-    },
-
-
     config = function()
         -- Luaaa
         vim.lsp.enable('lua_ls')
@@ -59,30 +44,21 @@ return {
                 if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_completion) then
                     vim.opt.completeopt = { 'menu', 'menuone', 'noinsert', 'fuzzy', 'popup' }
 
-                    -- Lsp native completion. Commented now since we are trying blink
-                    -- vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = false })
+                    -- vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end,
+                    --     { buffer = ev.buf, remap = false, desc = "Go to Definition" })
+                    -- vim.keymap.set("n", "gD", function() vim.lsp.buf.declaration() end,
+                    --     { buffer = ev.buf, remap = false, desc = "Go to Declaration" })
+                    -- vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end,
+                    --     { buffer = ev.buf, remap = false, desc = "Open Diagnostic Float" })
+                    -- -- vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, {})
+                    -- -- vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, {})
+                    -- vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end,
+                    --     { buffer = ev.buf, remap = false, desc = "Code Action" })
+                    -- vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end,
+                    --     { buffer = ev.buf, remap = false, desc = "List References" })
+                    -- vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end,
+                    --     { buffer = ev.buf, remap = false, desc = "Rename Symbol" })
                     --
-                    -- -- Keymaps
-                    -- vim.keymap.set('i', '<C-n>', function()
-                    --     vim.lsp.completion.get()
-                    -- end)
-
-
-                    vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end,
-                        { buffer = ev.buf, remap = false, desc = "Go to Definition" })
-                    vim.keymap.set("n", "gD", function() vim.lsp.buf.declaration() end,
-                        { buffer = ev.buf, remap = false, desc = "Go to Declaration" })
-                    vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end,
-                        { buffer = ev.buf, remap = false, desc = "Open Diagnostic Float" })
-                    -- vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, {})
-                    -- vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, {})
-                    vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end,
-                        { buffer = ev.buf, remap = false, desc = "Code Action" })
-                    vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end,
-                        { buffer = ev.buf, remap = false, desc = "List References" })
-                    vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end,
-                        { buffer = ev.buf, remap = false, desc = "Rename Symbol" })
-
                     vim.keymap.set("n", "<leader>fr", function() vim.lsp.buf.format() end,
                         { buffer = ev.buf, remap = false, desc = "Format Document" })
 

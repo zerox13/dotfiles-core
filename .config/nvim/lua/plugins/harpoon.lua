@@ -12,8 +12,9 @@ return {
             -- REQUIRED
 
             vim.keymap.set("n", "<leader>w", function() harpoon:list():add() end, { desc = "Add file to harpoon list" })
-            vim.keymap.set("n", "<leader>h", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Toggle harpoon quick menu" })
-            
+            vim.keymap.set("n", "<leader>h", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end,
+                { desc = "Toggle harpoon quick menu" })
+
             -- Toggle previous & next buffers stored within Harpoon list
             vim.keymap.set("n", "<C-p>", function() harpoon:list():prev() end, { desc = "Go to previous harpoon file" })
             vim.keymap.set("n", "<C-n>", function() harpoon:list():next() end, { desc = "Go to next harpoon file" })
@@ -37,8 +38,7 @@ return {
             end
 
             vim.keymap.set("n", "<C-e>", function() toggle_telescope(harpoon:list()) end,
-            { desc = "Open harpoon telescope" })
-
+                { desc = "Open harpoon telescope" })
         end,
     }
 }
