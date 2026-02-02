@@ -10,6 +10,7 @@ return {
         vim.lsp.enable('html')
         vim.lsp.enable('cssls')
         vim.lsp.enable('eslint')
+        vim.lsp.enable('ts_ls')
         vim.lsp.enable('phpactor')
         -- DevOps
         vim.lsp.enable('yamlls')
@@ -52,8 +53,8 @@ return {
                     --     { buffer = ev.buf, remap = false, desc = "Open Diagnostic Float" })
                     -- -- vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, {})
                     -- -- vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, {})
-                    -- vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end,
-                    --     { buffer = ev.buf, remap = false, desc = "Code Action" })
+                    vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end,
+                        { buffer = ev.buf, remap = false, desc = "Code Action" })
                     -- vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end,
                     --     { buffer = ev.buf, remap = false, desc = "List References" })
                     -- vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end,
