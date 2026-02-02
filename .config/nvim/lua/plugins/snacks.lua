@@ -52,7 +52,6 @@ return {
         { "<leader>gp", function() Snacks.picker.gh_pr() end,                                   desc = "GitHub Pull Requests (open)" },
         { "<leader>gP", function() Snacks.picker.gh_pr({ state = "all" }) end,                  desc = "GitHub Pull Requests (all)" },
         -- Grep
-        { "<leader>sb", function() Snacks.picker.lines() end,                                   desc = "Buffer Lines" },
         { "<leader>sB", function() Snacks.picker.grep_buffers() end,                            desc = "Grep Open Buffers" },
         { "<leader>sg", function() Snacks.picker.grep() end,                                    desc = "Grep" },
         { "<leader>sw", function() Snacks.picker.grep_word() end,                               desc = "Visual selection or word",   mode = { "n", "x" } },
@@ -94,7 +93,7 @@ return {
         { "<leader>.",  function() Snacks.scratch() end,                                        desc = "Toggle Scratch Buffer" },
         { "<leader>S",  function() Snacks.scratch.select() end,                                 desc = "Select Scratch Buffer" },
         { "<leader>n",  function() Snacks.notifier.show_history() end,                          desc = "Notification History" },
-        { "<leader>bd", function() Snacks.bufdelete() end,                                      desc = "Delete Buffer" },
+        { "<leader>d", function() Snacks.bufdelete() end,                                      desc = "Delete Buffer" },
         { "<leader>cR", function() Snacks.rename.rename_file() end,                             desc = "Rename File" },
         { "<leader>gB", function() Snacks.gitbrowse() end,                                      desc = "Git Browse",                 mode = { "n", "v" } },
         { "<leader>gg", function() Snacks.lazygit() end,                                        desc = "Lazygit" },
@@ -153,7 +152,7 @@ return {
                     :map("<leader>uc")
                 Snacks.toggle.treesitter():map("<leader>uT")
                 Snacks.toggle.option("background", { off = "light", on = "dark", name = "Dark Background" }):map(
-                "<leader>ub")
+                    "<leader>ub")
                 Snacks.toggle.inlay_hints():map("<leader>uh")
                 Snacks.toggle.indent():map("<leader>ug")
                 Snacks.toggle.dim():map("<leader>uD")
