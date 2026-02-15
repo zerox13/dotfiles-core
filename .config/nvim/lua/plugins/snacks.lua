@@ -13,7 +13,19 @@ return {
             enabled = true,
             timeout = 3000,
         },
-        picker = { enabled = true },
+        picker = {
+            enabled = true,
+
+            hidden = true,
+            ignored = false,
+            sources = {
+                files = {
+                    hidden = true,
+                    ignored = false,
+                },
+            }
+
+        },
         quickfile = { enabled = true },
         scope = { enabled = true },
         scroll = { enabled = true },
@@ -23,7 +35,7 @@ return {
             notification = {
                 -- wo = { wrap = true } -- Wrap notifications
             }
-        }
+        },
     },
     keys = {
         -- Top Pickers & Explorer
@@ -93,7 +105,7 @@ return {
         { "<leader>.",  function() Snacks.scratch() end,                                        desc = "Toggle Scratch Buffer" },
         { "<leader>S",  function() Snacks.scratch.select() end,                                 desc = "Select Scratch Buffer" },
         { "<leader>n",  function() Snacks.notifier.show_history() end,                          desc = "Notification History" },
-        { "<leader>d", function() Snacks.bufdelete() end,                                      desc = "Delete Buffer" },
+        { "<leader>d",  function() Snacks.bufdelete() end,                                      desc = "Delete Buffer" },
         { "<leader>cR", function() Snacks.rename.rename_file() end,                             desc = "Rename File" },
         { "<leader>gB", function() Snacks.gitbrowse() end,                                      desc = "Git Browse",                 mode = { "n", "v" } },
         { "<leader>gg", function() Snacks.lazygit() end,                                        desc = "Lazygit" },
