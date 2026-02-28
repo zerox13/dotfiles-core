@@ -21,10 +21,11 @@ alias m='minikube'
 alias lg='lazygit'
 
 
-# Flutter 
+# mobile development stuff 
 alias f='flutter'
-
-# Cursor 
-alias ca='cursor-agent'
-
 alias adbweb="adb shell am start -a android.intent.action.VIEW -d"
+
+# AI Agents stuff 
+alias ca='cursor-agent'
+alias oc='opencode'
+
