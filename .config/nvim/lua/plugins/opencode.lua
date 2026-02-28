@@ -9,7 +9,13 @@ return {
     config = function()
         ---@type opencode.Opts
         vim.g.opencode_opts = {
-            -- Your configuration, if any — see `lua/opencode/config.lua`, or "goto definition".
+            -- TMUX
+            -- provider = {
+            --     enabled = "tmux", -- Default if inside a `tmux` session.
+            --     tmux = {
+            --         options = "-h", -- Options to pass to `tmux split-window`.
+            --     }
+            -- }
         }
 
         -- Required for `opts.auto_reload`.
@@ -28,14 +34,5 @@ return {
         vim.keymap.set('n', '-', '<C-x>', { desc = 'Decrement', noremap = true })
 
 
-        -- TMUX
-        vim.g.opencode_opts = {
-            provider = {
-                enabled = "tmux", -- Default if inside a `tmux` session.
-                tmux = {
-                    options = "-h", -- Options to pass to `tmux split-window`.
-                }
-            }
-        }
     end,
 }
