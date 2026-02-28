@@ -11,6 +11,10 @@ if [ -f ~/.profile ]; then
 . ~/.profile
 fi
 
+if [ -f ~/.profile_local ]; then
+    . ~/.profile_local
+fi
+
 if [ -f ~/.aliases ]; then
 . ~/.aliases
 fi
@@ -21,14 +25,6 @@ if [ -f ~/.RF_functions ]; then
 fi
 # Initialize completion system
 autoload -Uz compinit && compinit
-
-## History things
-HISTFILE=~/.histfile
-# Maximum lines kept in memory
-export HISTSIZE=100000
-# Maximum lines saved to $HISTFILE
-export SAVEHIST=100000
-setopt appendhistory
 
 
 # Eval things
