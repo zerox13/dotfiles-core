@@ -33,10 +33,6 @@ vim.keymap.set("n", "-", "<cmd>foldclose<CR>")
 vim.keymap.set("n", "+", "<cmd>foldopen<CR>")
 
 
--- Toggle floating terminal
-vim.keymap.set("n", "<leader>j", function()
-    vim.cmd.Floaterminal()
-end)
 -- LaTeX maps 
 --vim.keymap.set("n", "<leader>lc", ":! pdflatex main.tex <CR><CR>")
 --vim.keymap.set("n", "<leader>lv", ":! open main.pdf & disown <CR><CR>")

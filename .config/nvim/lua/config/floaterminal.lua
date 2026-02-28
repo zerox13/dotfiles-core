@@ -84,7 +84,13 @@ end
 -- Create a floating window with default dimensions
 vim.api.nvim_create_user_command("Floaterminal", toggle_terminal, {})
 
-vim.keymap.set("v", "<leader>ts", send_visual_to_floaterm, { desc = "Send selection to floaterm" })
-vim.keymap.set("n", "<leader>tl", function()
-  send_to_floaterm(vim.api.nvim_get_current_line())
-end, { desc = "Send line to floaterm" })
+-- Commented out for now since I don't use this anymore
+-- vim.keymap.set("v", "<leader>ts", send_visual_to_floaterm, { desc = "Send selection to floaterm" })
+-- vim.keymap.set("n", "<leader>tl", function()
+--   send_to_floaterm(vim.api.nvim_get_current_line())
+-- end, { desc = "Send line to floaterm" })
+
+-- Toggle floating terminal
+-- vim.keymap.set("n", "<leader>j", function()
+--     vim.cmd.Floaterminal()
+-- end)
