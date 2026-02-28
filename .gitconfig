@@ -1,3 +1,6 @@
+[include]
+    # NOTE: This file is not tracked by git, so you can safely put your local settings here.
+    path = ~/.gitconfig.local
 [core]
 	pager = delta
 	editor = nvim
