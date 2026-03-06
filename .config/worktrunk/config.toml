@@ -1,0 +1,20 @@
+[post-switch]
+tmux_rename = """
+if [ -n "$TMUX" ]; then
+  pane_path="$(tmux display-message -p -t "$TMUX_PANE" '#{pane_current_path}' 2>/dev/null || true)"
+  if [ "$pane_path" = {{ worktree_path }} ]; then
+    win_id="$(tmux display-message -p -t "$TMUX_PANE" '#{window_id}')"
+    tmux rename-window -t "$win_id" {{ repo }}.{{ branch | sanitize }}
+  fi
+fi
+"""
+
+[post-start]
+copy = "wt step copy-ignored"
+tmux_window = '[ -n "$TMUX" ] && tmux new-window -n {{ repo }}.{{ branch | sanitize }} -c {{ worktree_path }}'
+
+[commit.generation]
+command = """codex exec -m gpt-5.1-codex-mini -c model_reasoning_effort='low' --sandbox=read-only --json - | jq -sr '[.[] | select(.item.type? == "agent_message")] | last.item.text'"""
+
+[projects]
+

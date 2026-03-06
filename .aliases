@@ -29,3 +29,6 @@ alias adbweb="adb shell am start -a android.intent.action.VIEW -d"
 alias ca='cursor-agent'
 alias oc='opencode'
 
+# Worktrunk stuff
+alias wtc='wt switch --no-cd -c'
+alias wts='wt switch'
