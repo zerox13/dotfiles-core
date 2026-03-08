@@ -59,5 +59,14 @@ return {
             require("oil").setup(opts)
             vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>", { desc = "Open parent directory" })
         end,
+    },
+    -- Color highlighting
+    {
+        'brenoprata10/nvim-highlight-colors',
+        config = function()
+            -- Ensure termguicolors is enabled if not already
+            vim.opt.termguicolors = true
+            require('nvim-highlight-colors').setup({})
+        end
     }
 }
