@@ -5,13 +5,9 @@
 
 ░ ▒█▀▀▄ ▒█▀▀▀█ ▀▀█▀▀ ▒█▀▀▀ ▀█▀ ▒█░░░ ▒█▀▀▀ ▒█▀▀▀█    
 ▄ ▒█░▒█ ▒█░░▒█ ░▒█░░ ▒█▀▀▀ ▒█░ ▒█░░░ ▒█▀▀▀ ░▀▀▀▄▄    
-█ ▒█▄▄▀ ▒█▄▄▄█ ░▒█░░ ▒█░░░ ▄█▄ ▒█▄▄█ ▒█▄▄▄ ▒█▄▄▄█    
+█ ▒█▄▄▀ ▒█▄▄▄█ ░▒█░░ ▒█░░░ ▄█▄ ▒█▄▄█ ▒█▄▄▄ ▒█▄▄▄▄
 
 
-
-
-   
-Manages my core dotfiles that are not specific for an OS. The rest will be eaither in a new repo or in a sepreate branch.
 
 ### Config list
 This repo contains config files for the following:
@@ -21,13 +17,16 @@ This repo contains config files for the following:
 - shell functions
 - Aliases
 - Starship
+- worktrunk
+
 
 ## Setup
 
 #### Prerequisites
-* Install GNU stow
+* install GNU stow
 * install tmux tpm
 * install nvim
+* install zodix
 * install colorls
     * Run: ```gem install colorls```
 * install a NerdFont, like FiraCode
