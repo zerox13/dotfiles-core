@@ -39,8 +39,8 @@ return {
         -- vim.keymap.set('n', '<leader>gt', builtin.git_stash,         { desc = "Git Stash" })
         --
         -- LSP Pickers
-        vim.keymap.set('n', '<leader>rr', builtin.lsp_references, { desc = "LSP References" })
-        vim.keymap.set('n', '<leader>rd', builtin.lsp_definitions, { desc = "LSP Definitions" })
+        -- vim.keymap.set('n', '<leader>rr', builtin.lsp_references, { desc = "LSP References" })
+        -- vim.keymap.set('n', '<leader>rd', builtin.lsp_definitions, { desc = "LSP Definitions" })
         vim.keymap.set('n', '<leader>ric', builtin.lsp_incoming_calls, { desc = "LSP Incoming Calls" })
         vim.keymap.set('n', '<leader>roc', builtin.lsp_outgoing_calls, { desc = "LSP Outgoing Calls" })
 

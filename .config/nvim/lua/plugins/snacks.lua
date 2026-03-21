@@ -86,7 +86,7 @@ return {
         { "<leader>sM", function() Snacks.picker.man() end,                                     desc = "Man Pages" },
         { "<leader>sp", function() Snacks.picker.lazy() end,                                    desc = "Search for Plugin Spec" },
         { "<leader>sq", function() Snacks.picker.qflist() end,                                  desc = "Quickfix List" },
-        { "<leader>sR", function() Snacks.picker.resume() end,                                  desc = "Resume" },
+        { "<leader>rr", function() Snacks.picker.resume() end,                                  desc = "Resume" },
         { "<leader>su", function() Snacks.picker.undo() end,                                    desc = "Undo History" },
         { "<leader>uC", function() Snacks.picker.colorschemes() end,                            desc = "Colorschemes" },
         -- LSP
@@ -95,8 +95,8 @@ return {
         { "gr",         function() Snacks.picker.lsp_references() end,                          nowait = true,                       desc = "References" },
         { "gI",         function() Snacks.picker.lsp_implementations() end,                     desc = "Goto Implementation" },
         { "gy",         function() Snacks.picker.lsp_type_definitions() end,                    desc = "Goto T[y]pe Definition" },
-        { "gai",        function() Snacks.picker.lsp_incoming_calls() end,                      desc = "C[a]lls Incoming" },
-        { "gao",        function() Snacks.picker.lsp_outgoing_calls() end,                      desc = "C[a]lls Outgoing" },
+        { "gi",        function() Snacks.picker.lsp_incoming_calls() end,                      desc = "C[a]lls Incoming" },
+        { "go",        function() Snacks.picker.lsp_outgoing_calls() end,                      desc = "C[a]lls Outgoing" },
         { "<leader>ss", function() Snacks.picker.lsp_symbols() end,                             desc = "LSP Symbols" },
         { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end,                   desc = "LSP Workspace Symbols" },
         -- Other
